@@ -1,16 +1,25 @@
-import React from 'react'
-import Logo from './Logo'
-import Menu from '../Menu/Menu';
-import Button from '../Button/Button';
+import React from "react";
+import Logo from "./Logo";
+import Menu from "../Menu/Menu";
+import Button from "../Button/Button";
+import Theme from "../Switch/Theme";
 
-const Header = () => {
-    return (
-        <div className="l-header">
-            <Logo/>
-            <Menu/>
-            <Button/>
-        </div>
-    )
-}
+import { connect } from 'react-redux'
 
-export default Header
+
+const Header = ({theme}) => {
+  return (
+    <div className="l-header">
+      <Logo />
+      <Menu />
+      <Button />
+      <Theme />
+    </div>
+  );
+};
+
+const mapStateToProps = state => ({
+  theme: state.theme
+});
+
+export default connect(mapStateToProps)(Header);

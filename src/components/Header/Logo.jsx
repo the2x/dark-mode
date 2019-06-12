@@ -1,12 +1,18 @@
-import React from 'react'
+import React from "react";
+import { connect } from 'react-redux'
 
-const Logo = () => {
-    return (
-        <div>
-            <div className="l-header__logo"></div>
-            <div className="l-header__info"></div>
-        </div>
-    )
-}
 
-export default Logo
+const Logo = ({ theme }) => {
+  return (
+    <div>
+      <div className={`l-header__logo l-header__logo--${theme}`} />Logo
+      <div className="l-header__info" />Desciption
+    </div>
+  );
+};
+
+const mapStateToProps = state => ({
+  theme: state.theme
+});
+
+export default connect(mapStateToProps)(Logo);
