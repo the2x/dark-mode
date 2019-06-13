@@ -4,22 +4,15 @@ import Menu from "../Menu/Menu";
 import Button from "../Button/Button";
 import Theme from "../Switch/Theme";
 
-import { connect } from 'react-redux'
-
-
-const Header = ({theme}) => {
+const Header = _ => {
   return (
-    <div className="l-header">
+    <header className="l-header">
       <Logo />
       <Menu />
       <Button />
       <Theme />
-    </div>
+    </header>
   );
 };
 
-const mapStateToProps = state => ({
-  theme: state.theme
-});
-
-export default connect(mapStateToProps)(Header);
+export default Header;

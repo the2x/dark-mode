@@ -9,9 +9,9 @@ class Menu extends Component {
     });
 
     return (
-      <div>
-        <ul>{Navigation}</ul>
-      </div>
+      <>
+        <ul className="c-navigation">{Navigation}</ul>
+      </>
     );
   }
 }

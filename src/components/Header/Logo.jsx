@@ -1,18 +1,13 @@
 import React from "react";
-import { connect } from 'react-redux'
-
+import { WrapperContainer } from '../../containers/themeContainer'
 
 const Logo = ({ theme }) => {
   return (
-    <div>
-      <div className={`l-header__logo l-header__logo--${theme}`} />Logo
-      <div className="l-header__info" />Desciption
+    <div className="l-header__logo">
+      <div className={`l-header__logo-pic l-header__logo-pic--${theme}`} />Logo
+      <div className={`l-header__logo-title l-header__logo-title--${theme}`} />Desciption
     </div>
   );
 };
 
-const mapStateToProps = state => ({
-  theme: state.theme
-});
-
-export default connect(mapStateToProps)(Logo);
+export default WrapperContainer(Logo)
