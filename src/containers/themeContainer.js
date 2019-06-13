@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
+    checked: state.checked,
     theme: state.theme
 });
 

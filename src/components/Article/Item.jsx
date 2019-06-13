@@ -1,10 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { WrapperContainer } from "../../containers/themeContainer";
 
-class Item extends Component {
-  render() {
-    const { news, theme } = this.props;
-
+const Item = ({news, theme}) => {
     const Categories = news.category.map((cat, index) => {
       return (
         <a className={`l-article__category l-article__category--${theme}`} key={index} href={cat.url}>
@@ -24,6 +21,6 @@ class Item extends Component {
       </>
     );
   }
-}
+
 
 export default WrapperContainer(Item);

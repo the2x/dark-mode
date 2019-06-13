@@ -2,11 +2,11 @@ import React from "react";
 import { WrapperContainer } from "../../containers/themeContainer";
 
 
-const Theme = ({ changeTheme }) => {
+const Theme = ({ changeTheme, checked }) => {
+  const themeName = checked ? 'light' : 'dark';
   return (
     <div>
-      <input onChange={() => changeTheme('light')} type="radio" name="theme" defaultChecked /> Light
-      <input onChange={() => changeTheme('dark')} type="radio" name="theme" /> Dark
+      <input onChange={() => changeTheme(themeName)} type="checkbox" checked={checked} value={checked} />
     </div>
   );
 };

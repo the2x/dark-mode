@@ -7,7 +7,11 @@ import themeReducer from './reducers/themeReducer'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
-const store = createStore(themeReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const persistedState = localStorage.getItem('themeState') ? JSON.parse(localStorage.getItem('themeState')) : {}
+const store = createStore(themeReducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+store.subscribe(()=>{ localStorage.setItem('themeState', JSON.stringify(store.getState()))} )
+
 console.log(store.getState());
 
 ReactDOM.render(

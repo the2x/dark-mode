@@ -7,6 +7,7 @@ const themeReducer = (state = initialState, action) => {
         case 'CHANGE_THEME':
             return ({
                 ...state,
+                checked: !state.checked,
                 theme: action.payload
             })
         default:
