@@ -1,7 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
+import { WrapperContainer } from "../../containers/themeContainer";
 
-const Theme = ({changeTheme}) => {
+
+const Theme = ({ changeTheme }) => {
   return (
     <div>
       <input onChange={() => changeTheme('light')} type="radio" name="theme" defaultChecked /> Light
@@ -10,21 +11,4 @@ const Theme = ({changeTheme}) => {
   );
 };
 
-const mapStateToProps = state => ({
-  theme: state.theme
-});
-
-const mapDispatchToProps = dispatch => {
-  return {
-    changeTheme: theme =>
-      dispatch({
-        type: "CHANGE_THEME",
-        payload: theme
-      })
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Theme);
+export default WrapperContainer(Theme);

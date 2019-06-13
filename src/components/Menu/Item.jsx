@@ -1,16 +1,9 @@
-import React from 'react'
-import data from '../../data/data'
+import React from "react";
 
-const link = data.menu;
+const Item = ({nav}) => {
+  return (
+    <li><a href={nav.url}>{nav.title}</a></li>
+  );
+};
 
-const Item = ({}) => {
-    return (
-        <div>
-            <a href={link[0].url}>{link[0].title}</a>
-        </div>
-    )
-}
-
-// orhidea, univers, hvoya
-
-export default Item
+export default Item;

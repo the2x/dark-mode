@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { Component } from "react";
+import { menu } from "../../data/data";
+import Item from "./Item";
 
-const Menu = () => {
+class Menu extends Component {
+  render() {
+    const Navigation = menu.map((nav, index) => {
+      return <Item key={index} nav={nav} />;
+    });
+
     return (
-        <div>
-            <a href={""}></a>
-        </div>
-    )
+      <div>
+        <ul>{Navigation}</ul>
+      </div>
+    );
+  }
 }
 
-export default Menu
+export default Menu;
