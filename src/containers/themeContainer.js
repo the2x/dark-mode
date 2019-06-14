@@ -1,4 +1,6 @@
-import { connect } from "react-redux";
+import {
+    connect
+} from "react-redux";
 
 const mapStateToProps = state => ({
     checked: state.checked,
@@ -7,11 +9,13 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeTheme: theme =>
+        changeTheme: theme => {
             dispatch({
                 type: "CHANGE_THEME",
                 payload: theme
             })
+
+        }
     };
 };
 

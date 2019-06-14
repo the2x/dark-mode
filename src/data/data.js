@@ -30,6 +30,7 @@ export const article = [{
         url: '#',
         title: 'Математика'
     }],
+    img: 'https://simplebeyond.com/wp-content/uploads/2018/01/10-movies-about-famous-authors-sb-11.jpg',
     title: 'Почему настроено позитивно точечное воздействие?',
     description: 'Сегментация рынка вырождена. Начальная стадия проведения исследования, в рамках сегодняшних воззрений, неестественно тормозит ролевой имидж.',
     slug: '#',

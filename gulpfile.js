@@ -15,7 +15,7 @@ function styles() {
             })
         )
         .pipe(minifyCSS())
-        .pipe(dest("./public/css"));
+        .pipe(dest("./src/styles/css"));
 }
 
 function watch() {

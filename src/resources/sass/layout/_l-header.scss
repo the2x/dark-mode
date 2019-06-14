@@ -1,0 +1,44 @@
+.l-header {
+    display: flex;
+    margin: 3rem auto 0;
+    max-width: 140rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.l-header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.l-header__logo-pic {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+
+    &--light {
+        background-color: $blue;
+    }
+
+    &--dark {
+        background-color: $pink;
+    }
+}
+
+.l-header__logo-title {
+    width: 11rem;
+    height: 2.5rem;
+
+    &--light {
+        background-color: $black;
+    }
+
+    &--dark {
+        background-color: $white;
+    }
+}
+
+.dark {
+    background-color: $black;
+}

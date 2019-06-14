@@ -1,0 +1,28 @@
+.c-navigation {
+    width: 100%;
+    max-width: 55rem;
+    display: flex;
+    margin-right: 3rem;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-navigation__list {
+    flex: 1;
+    text-align: center;
+    list-style: none;
+}
+
+.c-navigation__list-link {
+    font-size: $font-size-regular;
+    text-decoration: none;
+
+    &--light {
+        color: $black;
+    }
+
+    &--dark {
+        color: $white;
+    }
+}

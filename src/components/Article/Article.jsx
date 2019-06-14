@@ -6,13 +6,13 @@ class Article extends Component {
   render() {
     const ArticleItem = article.map((news, index) => {
       return (
-        <article className="l-article" key={index}>
+        <article className="l-article__item" key={index}>
           <Item news={news} />
         </article>
       );
     });
 
-    return <main>{ArticleItem}</main>;
+    return <main className="l-article">{ArticleItem}</main>;
   }
 }
 

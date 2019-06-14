@@ -1,0 +1,18 @@
+.c-button {
+    display: inline-block;
+    padding: 0 3rem;
+    line-height: 4rem;
+    font-size: $font-size-regular;
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    border-radius: 2px;
+
+    &--light {
+        background-color: $blue;
+    }
+
+    &--dark {
+        background-color: $pink;
+    }
+}

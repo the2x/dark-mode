@@ -1,0 +1,48 @@
+$color_checkbox_success: $pink;
+$color_checkbox_default: $blue;
+$transition: .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 6em;
+$height: $width/2;
+
+.l-header__theme{
+    margin-left: 3rem;
+
+    .toggle{
+        .toggle-control{
+            transition: $transition;
+            width: $width;
+            height: $height;
+            display: block;
+            border: 2px solid $color_checkbox_default;
+            border-radius: $height;
+            background-color: $blue;
+            position: relative;
+
+            &:after{
+                transition: $transition;
+                content: "";
+                width: 2.7rem;
+                height: 2.7rem;
+                display: block;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    input{
+      display: none;
+
+        &:checked + .toggle-control{
+            border-color: $color_checkbox_success;
+            background-color: $color_checkbox_success;
+
+            &:after{
+                left: $width/2;
+            }
+        }
+    }
+}
